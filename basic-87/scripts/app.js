@@ -32,9 +32,9 @@ $("form").submit(function(e){
 	  /*url: "http://localhost/tp-ajax/api-form.php",*/
 	  url: "http://localhost/tp-ajax/api-form.php",
 	  method: "GET", // automatiquement GET si la method n'est pas renseignée. mais par convention on l'a renseigne
-	/*  dataType: "json" // optionel*/
+	 dataType: "json" // optionel*/
 	});
-	 
+	
 	// si la requete s'execute bien -> 
 	request.done(function( data ) { // data = reponse du serveur. 
 		var content = "";
