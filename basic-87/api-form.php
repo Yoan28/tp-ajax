@@ -23,4 +23,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$stmt -> bindParam(':image', $_POST['image']);
 	$stmt -> execute();
 }
-
+elseif($_SERVER['REQUEST_METHOD'] == 'GET'){
+	$stmt = $pdo -> prepare("SELECT * FROM voitures");
+$stmt -> execute();
+echo json_encode($stmt->fetchAll());
+}
