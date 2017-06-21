@@ -5,6 +5,10 @@
 <meta charset="iso-8859-1">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
 <div class="wrapper row1">
@@ -60,7 +64,11 @@
     <!-- main content -->
     <div id="content">
       <section id="services" class="last clear">
+
         <ul>
+
+        <!-- <ul>
+
           <li>
             <article class="clear">
               <figure><img src="images/demo/180x150.gif" alt="">
@@ -83,7 +91,82 @@
               </figure>
             </article>
           </li>
+
         </ul>
+
+        </ul> -->
+
+  <!-- FORMULAIRE -->
+  <!-- ***************************************************************************************** -->
+    <!-- ***************************************************************************************** -->
+      <!-- ***************************************************************************************** -->
+      <div id="message_ajax"></div>
+     <form class="form-horizontal" action="api.php" method="POST">
+            <fieldset>
+                <input id="id" name="id" type="hidden" placeholder="" class="form-control input-md" required="">
+                
+              <!-- Form Name -->
+              <legend>Formulaire</legend>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="firstname">Marque</label>  
+                <div class="col-md-4">
+                   <input id="marque" name="marque" type="text" placeholder="Megane" class="form-control input-md" required="">
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="lastname">Modele</label>  
+                <div class="col-md-4">
+                   <input id="modele" name="modele" type="text" placeholder="RS24" class="form-control input-md" required="">
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="datenaiss">Annee</label>  
+                <div class="col-md-4">
+                   <input id="annee" name="annee" type="date" placeholder="" class="form-control input-md" required="">
+                </div>
+              </div>
+
+              <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="office">Couleur</label>
+                <div class="col-md-4">
+                <select id="couleur" name="couleur" class="form-control">
+                  <option value="black">Black</option>
+                  <option value="white">White</option>
+                  <option value="blue">Blue</option>
+                  <option value="mike">Mike</option>
+                </select>
+                </div>
+              </div>
+              <!-- -->
+               <div class="form-group">
+                <label class="col-md-4 control-label" for="office">Image</label>
+                <div class="col-md-4">
+                  <input id="image" name="image" type="text" placeholder="url..." class="form-control input-md" required="">
+                </select>
+                </div>
+              </div>
+
+              <!-- Button (Double) -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="">Validation</label>
+                <div class="col-md-8">
+                <button id="" name="" type="submit" class="btn btn-success">Envoyer</button>
+                <button id="deleteUser" name="" class="btn btn-danger">Delete</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+  <!-- ***************************************************************************************** -->
+    <!-- ***************************************************************************************** -->
+      <!-- ***************************************************************************************** -->
+
       </section>
     </div>
     <!-- right column -->
@@ -108,12 +191,17 @@
     <!-- / content body -->
   </div>
 </div>
+
 <!-- Footer -->
 <div class="wrapper row3">
   <footer id="footer" class="clear">
     <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">Domain Name</a></p>
     <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="scripts/app.js"></script>
+
 </div>
 </body>
 </html>
